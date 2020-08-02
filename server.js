@@ -11,9 +11,8 @@ const PORT = process.env.PORT || 3001;
 // Setting up the server: first step to instantiate the server
 const app = express();
 
-// middleware and parsing
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+// direction to access public folder data
+app.use(express.static('public'));
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
@@ -21,8 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-// direction to access public folder data
-app.use(express.static('public'));
+// middleware and parsing
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // Setting up the server: listen for requests
 app.listen(PORT, () => {
