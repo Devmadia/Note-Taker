@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application used with an Express.js back end to write and save notes, data will be retrieved through a JSON file notes are stored to.",
   "main": "server.js",
   "scripts": {
     "test": "npm start"
