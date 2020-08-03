@@ -18,8 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // parse incoming JSON data
 app.use(express.json());
-
-// middleware and parsing
+// middleware
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
