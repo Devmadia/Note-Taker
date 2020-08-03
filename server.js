@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express'); // require Express.js
 
 // routes
@@ -27,4 +26,4 @@ app.use('/', htmlRoutes);
 // Setting up the server: listen for requests
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
-  });
+});
